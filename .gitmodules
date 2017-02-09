@@ -1,6 +1,6 @@
 [submodule "leash-attachment"]
 	path = leash-attachment
-	url = git@github.com:makyo/leash-attachment.git
+	url = https://github.com/makyo/leash-attachment.git
 [submodule "tiny-guide"]
 	path = tiny-guide
-	url = git@github.com:makyo/tiny-guide.git
+	url = https://github.com/makyo/tiny-guide.git
