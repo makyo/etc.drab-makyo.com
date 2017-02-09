@@ -4,3 +4,6 @@
 [submodule "tiny-guide"]
 	path = tiny-guide
 	url = https://github.com/makyo/tiny-guide.git
+[submodule "prose-wc"]
+	path = prose-wc
+	url = https://github.com/makyo/prose-wc.git
