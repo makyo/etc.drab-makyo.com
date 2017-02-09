@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "/etc/makyo"
+title: "/etc/drab/makyo"
 email: makyo.drab-makyo.com
 description: >
   Sometimes I come up with silly one-page projects, or documents, or other things to share. Those will wind up here for me to link out or for you to paw through!
