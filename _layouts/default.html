@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>{{ site.title }} | {{ page.title }}</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css?v={{ site.github.build_revision }}">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="/">{{ site.title }} <small>Madison Scott-Clary</small></a></h1>
+        <p>{{ site.description | markdownify }}</p>
+    </header>
+      <section>
+
+      {% if page.title %}
+      <h1>{{ page.title }}</h1>
+      <hr />
+      {% endif %}
+      {{ content }}
+
+      </section>
+      <footer>
+        All content is &copy; Madison Scott-clary<br />
+        Licensing is probably more involved and may be covered on the projects
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+
+
+  {% if site.google_analytics %}
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("{{ site.google_analytics }}");
+      pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
+  {% endif %}
+  </body>
+</html>
