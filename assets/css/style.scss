@@ -39,6 +39,6 @@ code {
     box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.25);
     border-radius: 5px;
     padding: 1em;
-    margin: 1em 0;
-    width: 100%
+    margin: 1em auto;
+    max-width: 100%;
 }

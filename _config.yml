@@ -24,6 +24,7 @@ github_username:  makyo
 
 # Build settings
 markdown: kramdown
+markdown_ext: "markdown,mkdown,mkdn,mkd,md,litcoffee"
 theme: jekyll-theme-minimal
 exclude:
   - Gemfile

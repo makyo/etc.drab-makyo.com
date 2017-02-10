@@ -7,3 +7,6 @@
 [submodule "prose-wc"]
 	path = prose-wc
 	url = https://github.com/makyo/prose-wc.git
+[submodule "twinedown"]
+	path = twinedown
+	url = https://github.com/makyo/twinedown.git

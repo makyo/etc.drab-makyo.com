@@ -1,9 +1,12 @@
 leash-attachment:
   name: BDSM Collar Leash and Tag Attachment
-  description: A nylon-webbing-bsaed loop for attaching leashes or tags to metal collars without scratching them. Full plans and instructions in SVG format!
+  description: A nylon-webbing-based loop for attaching leashes or tags to metal collars without scratching them. Full plans and instructions in SVG format!
 prose-wc:
   name: "`prose-wc`"
   description: A prose- and Jekyll-aware wordcount utility, written to learn python packaging.
 tiny-guide:
   name: Makyo's Tiny Guide to MUCKing
   description: Makyo's been MUCKing for quite a while, and as a friend got started, she began pulling together all the basics into one tiny guide!
+twinedown:
+  name: Twinedown
+  description: A set of tools for working with Twine 2 files.
