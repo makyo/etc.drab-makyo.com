@@ -7,6 +7,9 @@ prose-wc:
 tiny-guide:
   name: Makyo's Tiny Guide to MUCKing
   description: Makyo's been MUCKing for quite a while, and as a friend got started, she began pulling together all the basics into one tiny guide!
+tfrc:
+  name: ".tfrc"
+  description: Along with the tiny guide provided above, Makyo also has a comprehensive .tfrc set up, which is explained here.
 twinedown:
   name: Twinedown
   description: A set of tools for working with Twine 2 files.

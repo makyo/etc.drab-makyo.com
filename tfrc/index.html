@@ -1,0 +1,30 @@
+---
+layout: default
+title: ".tfrc"
+---
+
+<p>My .tfrc has grown organically over the years, but recently, I started to organize it into a cohesive project. Since some of the stuff I've figured out might be of use to others, I've split it into several files. cleaned them up, and commented them. They're embedded here with a bit of explanation</p>
+
+<h2>Timeout prevention</h2>
+<p><code>automew.tf</code> is a snippet I pulled together to let me manage idle timeouts. On taps, one idles out after something like six hours, but the idle-sweep in the plaza is one hour. The idle-out on FurryMUCK is similarly short. To this end, I have a function that whispers something to me every half hour.</p>
+<p>A lot of folks set up a noop function through MPI that doesn't spam them with anything, but I find that I like the timestamp when reading through scrollback. With the whole line hilited, it's easy to see, too. Note that, with the away stuff below, though, you'll have to <code>wh #priority</code> yourself in order to recieve the whispers.</p>
+<script src="https://gist.github.com/makyo/e436c94c6e569e9d7e50be52eb0027d5.js?file=automew.tf"></script>
+
+<h2>Away/present status</h2>
+<p>The away/present stuff comprises two different bits of functionality: the ability to set oneself away, and additional instructions of what to do while one is away.</p>
+<h3>Setting status</h3>
+<p>I have <s>a few</s> <s>some</s> a lot of hangups around me disappearing. It even gets to the point of planning what would happen to my dogs if I suddenly ceased to be. Maybe it's a common fear, maybe not. I guess I just don't want to slip from the minds of people I care about.</p>
+<p>Anyway.</p>
+<p><code>away.tf</code> allows one to set oneself away. That sets up an away message for pages and turns off whispers (it was intended to encourage people to page me when I was away, but in reality wound up just discouraging people from whispering). Additionally, it sets up some of the logging stuff below. Finally, to address my worries, it allows me to set myself away/back visibly so that folks know when I step away from the keyboard. It serves the same point as, say, renaming oneself "Makyo|AFK" on IRC.</p>
+<script src="https://gist.github.com/makyo/e436c94c6e569e9d7e50be52eb0027d5.js?file=away.tf"></script>
+<h3>Logging mentions</h3>
+<p><code>log_mentions.tf</code> allows me to log mentions of certain patterns to the file <code>mentions.txt</code>. This means that I can see pages I've received and what folks have said about me while I'm in the room but not present. My habit is to set myself away, detach from the tmux session, and run <code>tail -f mentions.txt</code>, so that when I get back to the computer, I can quickly browse anything that happened while I was gone.</p>
+<script src="https://gist.github.com/makyo/e436c94c6e569e9d7e50be52eb0027d5.js?file=log_mentions.tf"></script>
+
+<h2>Hilites</h2>
+<p>My hilites are pretty standard. All I've done that's special in <code>hilites.tf</code> is add a <code>/wfhilite</code> macro to quickly add a hilite partial for other folks I want to see easily. Hilites of me, along with pages and whispers, are green, while hilites of others are cyan.</p>
+<script src="https://gist.github.com/makyo/e436c94c6e569e9d7e50be52eb0027d5.js?file=hilites.tf"></script>
+
+<h2>Pulling it together</h2>
+<p>My <code>.tfrc</code> file pulls everything together. Since all of the functions are safe to reload &mdash; that is, they can be purged and redefined without problems; those that one doesn't want purged, such as active mention loggers, should have <code>-i</code> flags &mdash; It means I can update my work with <code>/load .tfrc</code>. This will purge all purgable functions and reload everything except for worlds. If I want to reload those, I have to load the file separately; I left that as a require because it's noisy.</p>
+<script src="https://gist.github.com/makyo/e436c94c6e569e9d7e50be52eb0027d5.js?file=.tfrc"></script>
