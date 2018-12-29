@@ -26,9 +26,11 @@ title: ".tfrc"
 <p>Note that mentions to `wixxx` require the `wixxx` logging module below. If you're not using that, you can just remove instances of `/wixxx_trigger`</p>
 <script src="https://gist.github.com/makyo/e436c94c6e569e9d7e50be52eb0027d5.js?file=hilites.tf"></script>
 
+<!--
 <h2><code>wixxx</code> logging</h2>
 <p>As I research the ways in which furries interact with sex, my projects have led to me investigating tagging. I've done work with e621 and SoFurry, and, with TF being so powerful, I figured I'd do so with Tapestries as well. This file uses the <a href="https://github.com/makyo/wixxx" target="blank">wixxx project</a> to gather and store frequencies with which wixxx tags show up. It defines <code>/logwixxx</code>, which will run <code>wixxx</code> (optionally with a name or names to pass to it) silently, save the output to a temporary file, use <code>wixxx-client</code> to upload the information to the server, and remove the temporary file.</p>
 <script src="https://gist.github.com/makyo/e436c94c6e569e9d7e50be52eb0027d5.js?file=wixxx.tf"></script>
+-->
 
 <h2>Pulling it together</h2>
 <p>My <code>.tfrc</code> file pulls everything together. Since all of the functions are safe to reload &mdash; that is, they can be purged and redefined without problems; those that one doesn't want purged, such as active mention loggers, should have <code>-i</code> flags &mdash; It means I can update my work with <code>/load .tfrc</code>. This will purge all purgable functions and reload everything except for worlds. If I want to reload those, I have to load the file separately; I left that as a require because it's noisy.</p>
