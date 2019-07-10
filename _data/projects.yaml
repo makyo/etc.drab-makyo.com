@@ -13,3 +13,6 @@ tfrc:
 twinedown:
   name: Twinedown
   description: A set of tools for working with Twine 2 files.
+3rings:
+  name: The Rings - A 78-Card Tarot Spread
+  description: The Rings is a full-deck layout for cartomancy or more contemporary idea framework tarot readings.
